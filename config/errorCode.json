@@ -1,0 +1,155 @@
+{
+    "addict_error" : {
+        "econnrefused" : {
+            "code" : 503,
+            "errorCode": "ECONNREFUSED",
+            "errorDescription": "The addict service is down."
+        },
+        "etimedout" : {
+            "code" : 502,
+            "errorCode": "ETIMEDOUT",
+            "errorDescription": "The addict service is not able to connect to the Active Directory."
+        },
+        "enotfound" :{
+            "code" : 502,
+            "errorCode": "ENOTFOUND",
+            "errorDescription": "The addict service is not able to connect to the Active Directory."
+        }
+    },
+    "auth_error" : {
+        "missing_api_key" : {
+            "code" : 401,
+            "errorCode" :"MISSING_API_KEY",
+            "errorDescription" : "You are not authorized to perform this operation since the API key is missing."
+        },
+        "invalid_api_key" : {
+            "code" : 401,
+            "errorCode" :"INVALID_API_KEY",
+            "errorDescription" : "You are not authorized to perform this operation since the API key is invalid."
+        }
+    },
+    "group_error" : {
+        "group_not_found" : {
+            "code" : 404,
+            "errorCode": "GROUP_NOT_FOUND",
+            "errorDescription": "The group does not exist in the Active Directory."
+        },
+        "group_exists" : {
+            "code" : 409,
+            "errorCode": "GROUP_EXISTS",
+            "errorDescription": "The group already exists in the Active Directory."
+        },
+        "group_user_exists" : {
+            "code" : 409,
+            "errorCode": "USER_EXISTS_IN_GROUP",
+            "errorDescription": "The user already present in the group."
+        },
+        "location_not_provided" :{
+            "code" : 400,
+            "errorCode": "LOCATION_NOT_PROVIDED",
+            "errorDescription": "The location attribute must be provided. The location refers to the organisational unit under which group must be added."
+        },
+        "more_than_one_group_exists" :{
+            "code" : 400,
+            "errorCode" :"MORE_THAN_ONE_GROUP_EXISTS",
+            "errorDescription" : "There exists more than one group with the same name in the Active Directory."
+        }
+    },
+    "user_error" : {
+        "user_not_found" : {
+            "code" : 404,
+            "errorCode": "USER_NOT_FOUND",
+            "errorDescription": "The user does not exist in the Active Directory."
+        },
+        "user_exists" : {
+            "code" : 409,
+            "errorCode": "USER_EXISTS",
+            "errorDescription": "The user already exists in the Active Directory."
+        },
+        "location_not_provided" :{
+            "code" : 400,
+            "errorCode": "LOCATION_NOT_PROVIDED",
+            "errorDescription": "The location attribute must be provided. The location refers to the organisational unit under which user must be added."
+        },
+        "common_name_exists": {
+            "code" : 409,
+            "errorCode" : "COMMON_NAME_EXISTS",
+            "errorDescription": "The common name provided by you aleady exists in the Active Directory. Please provide a new common name."
+        },
+        "password_validation_failed" : {
+            "code": 400,
+            "errorCode" : "PASSWORD_VALIDATION_FAILED",
+            "errorDescription": "The password provided by you must meet the following conditions. The password provided by you must be 7 characters long. It must contain a special character. It must contain Alphanumeric characters which includes both capital and small letters, numeral and   a special character  and it should not contain user's first and last name." 
+        },
+        "password_update_validation_failed" : {
+            "code": 400,
+            "errorCode" : "PASSWORD_UPDATE_VALIDATION_FAILED",
+            "errorDescription": "The password provided by you must meet the following conditions. The password provided by you must be 7 characters long. It must contain a special character. It must contain Alphanumeric characters which includes both capital and small letters, numeral and   a special character and should not contain user first and last name. Any previous password must not be used. The AD remembers previous 24 passwords." 
+        },
+        "user_created_password_validation_failed" : {
+            "code": 200,
+            "errorCode" : "USER_CREATED_PASSWORD_VALIDATION_FAILED",
+            "errorDescription": "The user has been created successfully. However, the password does not meet the Active Directory password policy, please update the password before trying to login." 
+        },
+        "user_auth_error": {
+            "code" : 401,
+            "errorCode" : "USER_AUTH_ERROR",
+            "errorDescription": "The password is invalid, or the user is either disabled or expired."
+        }
+    },
+    "ou_error" : {
+        "location_not_found" : {
+            "code" : 404,
+            "errorCode": "LOCATION_NOT_FOUND",
+            "errorDescription": "The Location or Organisational Unit does not exist in the Active Directory."
+        },
+        "ou_not_found" : {
+            "code" : 404,
+            "errorCode": "OU_NOT_FOUND",
+            "errorDescription": "The Organisational Unit does not exist in the Active Directory."
+        },
+        "ou_exists" : {
+            "code" : 409,
+            "errorCode": "OU_EXISTS",
+            "errorDescription": "The Organisational Unit exists in the Active Directory."
+        },
+        "more_than_one_ou_exists" :{
+            "code" : 400,
+            "errorCode" :"MORE_THAN_ONE_OU_EXISTS",
+            "errorDescription" : "There exists more than one ou with the same name in the Active Directory."
+        }
+    },
+    "unknown_error" : {
+        "unknown_error" : {
+            "code" : 503,
+            "errorCode" : "UNKNOWN_ERROR",
+            "errorDecription" : "An unknown error occurred, please contact the administrator."
+        }
+    },
+    "dir_error" : {
+        "dir_exists" : {
+            "code" : 409,
+            "errorCode": "DIR_EXISTS",
+            "errorDescription": "The directory exists already."
+        }
+    },
+    "execution_error" : {
+        "execution_error" : {
+            "code" : 417,
+            "errorCode": "EXECUTION_ERROR",
+            "errorDescription": "Expectation Failed - The requested execution failed."
+        }
+    },
+    "request_error" : {
+        "bad_request" : {
+            "code" : 400,
+            "errorCode" : "REQUEST_ERROR",
+            "errorDecription" : "This is a bad request."
+        },
+        "invalid_date" : {
+            "code" : 400,
+            "errorCode" : "INVALID_DATE",
+            "errorDecription" : "Please provide a valid date in format MM-DD-YYYY."
+        }
+    }
+}
