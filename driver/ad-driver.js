@@ -15,7 +15,7 @@ var postUser = function () {
         headers: {
           'content-type': 'application/json'
         },
-        body: {"commonName":"vmwarePoc","userName":"vmwarePocUser","Password":"Vmware9!"},
+        body: {"commonName":"Poc","userName":"PocUser","Password":"Password123!"},
         json: true
       };
     Request.get(options,  (error, response, body) =>  {
